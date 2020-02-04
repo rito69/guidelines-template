@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import "reset";
+
+/* Body
+--------------------------------------- */
+body {
+  font-size: 1.4em;
+  font-size: 14px;
+  line-height: 1.8;
+  font-kerning: normal;
+  background: #f5f5f5;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+.sassText {
+  padding: 40px;
+  margin: 30px 15px;
+  background: #fff;
+  &__title {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  &__text {
+    font-size: 12px;
+  }
+}

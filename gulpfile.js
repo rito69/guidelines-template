@@ -29,10 +29,16 @@ function scss() {
     )
     .pipe(cache('sass'))
     .pipe(progeny())
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer({ grid: true }))
     .pipe(gcmq())
-    .pipe(cleanCSS())
+    .pipe(
+      cleanCSS({
+        level: {
+          1: { optimizeFontWeight: false },
+        },
+      })
+    )
     .pipe(
       rename(function(path) {
         path.dirname = path.dirname.replace('_sass', 'styles');
